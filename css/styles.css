@@ -10,3 +10,8 @@
 .place:hover {
   text-decoration: underline;
 }
+
+h1 {
+  font-family: 'Martel Sans';
+  font-weight: 800;
+}

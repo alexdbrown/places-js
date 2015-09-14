@@ -31,7 +31,6 @@ $(document).ready(function() {
       $("#show-place").show();
 
       $("#show-place h2").text(newPlace.placeName);
-      $(".place-name").text(newPlace.placeName);
       $(".place-time").text(newPlace.placeTime);
       $(".place-duration").text(newPlace.placeDuration);
 
