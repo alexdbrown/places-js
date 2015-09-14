@@ -22,11 +22,6 @@
             </div>
 
             <div class="form-group">
-              <label for="new-place-highlight">WHAT WERE YOU DOING?</label>
-              <input type="text" class="form-control" id="new-place-highlight">
-            </div>
-
-            <div class="form-group">
               <label for="new-place-time">WHENNNNNN?</label>
               <input type="text" class="form-control" id="new-place-time">
             </div>
@@ -35,6 +30,17 @@
               <label for="new-place-duration">FOR HOW LONG???</label>
               <input type="text" class="form-control" id="new-place-duration">
             </div>
+
+            <div id="new-highlights">
+              <div id="new-highlight">
+                <div class="form-group">
+                  <label for="new-place-highlight">NAME A THING YOU DID</label>
+                  <input type="text" class="form-control" id="new-place-highlight">
+                </div>
+              </div>
+            </div>
+
+            <span class="btn btn-success" id="add-highlight">MORE THINGS</span>
 
             <button type="submit" class="btn btn-danger">PROVE IT</button>
           </form>
@@ -50,9 +56,12 @@
             <h2></h2>
 
             <p>PLACE NAME: <span class="place-name"></span></p>
-            <p>HIGHLIGHT: <span class="place-highlight"></span></p>
             <p>TIME: <span class="place-time"></span></p>
             <p>DURATION: <span class="place-duration"></span></p>
+            <p>HIGHLIGHTS:</p>
+            <ul id="highlights">
+
+            </ul>
           </div>
         </div>
 
