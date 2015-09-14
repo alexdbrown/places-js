@@ -1,4 +1,14 @@
 $(document).ready(function() {
+  $("#add-highlight").click(function() {
+    $("#new-highlights").append('<div class="new-highlight">' +
+                                    '<div class="form-group">' +
+                                      '<label for="new-place-highlight">NAME ANOTHER! DO IT!</label>' +
+                                       '<input type="text" class="form-control" id="new-place-highlight">' +
+                                    '</div>' +
+                                '</div>');
+  });
+
+
   $("form#new-place").submit(function(event) {
     event.preventDefault();
 
