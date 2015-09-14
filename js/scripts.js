@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("#new-highlights").append('<div class="new-highlight">' +
                                     '<div class="form-group">' +
                                       '<label for="new-place-highlight">NAME ANOTHER! DO IT!</label>' +
-                                       '<input type="text" class="form-control" id="new-place-highlight">' +
+                                       '<input type="text" class="form-control new-place-highlight">' +
                                     '</div>' +
                                 '</div>');
   });
@@ -19,7 +19,7 @@ $(document).ready(function() {
     var newPlace = { placeName: inputPlaceName, placeTime: inputTime, placeDuration: inputDuration,  placeHighlights: [] };
 
     $(".new-highlight").each(function() {
-      var inputHighlight = $(this).find("input#highlight").val();
+      var inputHighlight = $(this).find("input.new-place-highlight").val();
 
       var newHighlight = { highlight: inputHighlight };
       newPlace.placeHighlights.push(newHighlight);
@@ -34,13 +34,16 @@ $(document).ready(function() {
       $(".place-name").text(newPlace.placeName);
       $(".place-time").text(newPlace.placeTime);
       $(".place-duration").text(newPlace.placeDuration);
-      $(".place-highlight").text(newPlace.placeHighlight);
 
+      $("ul#highlights").text("");
+      newPlace.placeHighlights.forEach(function(highlight) {
+        $("ul#highlights").append("<li>" + highlight.highlight + "</li>");
+      });
     });
 
     $("input#new-place-name").val("");
     $("input#new-place-time").val("");
     $("input#new-place-duration").val("");
-    $("input#new-place-highlight").val("");
+    $("input.new-place-highlight").val("");
   });
 });
