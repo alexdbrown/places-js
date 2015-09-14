@@ -14,7 +14,7 @@ $(document).ready(function() {
     $(".place").last().click(function() {
       $("#show-place").show();
 
-      $("#show-contact h2").text(newPlace.placeName);
+      $("#show-place h2").text(newPlace.placeName);
       $(".place-name").text(newPlace.placeName);
       $(".place-highlight").text(newPlace.placeHighlight);
       $(".place-time").text(newPlace.placeTime);
